@@ -34,8 +34,8 @@ with daViz:
 newFeatures = st.container()
 with newFeatures:
     st.subheader('Selección de variables:')
-    st.markdown('De manera inicial, el modelo trabaja con la edad, el promedio de horas labirales por semana y las variables: **race, sex, workclass y education.**')
-    st.text('¿Quieres considerar alguna otra variable? Selecciona las que quieras culero:')
+    st.markdown('De manera inicial, el modelo trabaja con la edad, el promedio de horas laborales por semana y las variables: **race, sex, workclass y education.**')
+    st.text('¿Quieres considerar alguna otra variable? Selecciona las que quieras pana rabbit:')
     
     optional_cols = ['education-num', 'marital-status', 'occupation', 'relationship']
 
@@ -80,8 +80,8 @@ with modelTrain:
         
 UserTesteo = st.container()
 with UserTesteo:
-    st.subheader('¡Prueba el modelo hdtpm!')
-    st.markdown('Mezcla las opciones para descubrir si ganarías más que un nigger o $50K.')
+    st.subheader('¡Prueba el modelo pana!')
+    st.markdown('Mezcla las opciones para descubrir si ganarías más que una persona o $50K.')
     
     dict_test = {}
     for col in ['age', 'hours-per-week'] + principal_columns:
@@ -112,6 +112,6 @@ with UserTesteo:
         proba = model.predict_proba(df_form)[0]
         resultado = model.predict(df_form)
         if resultado == 0:
-            st.markdown(f'La persona **no ganará** más que un negro de mierda con una probabilidad de {round(proba[0]*100,2)}%')
+            st.markdown(f'La persona **no ganará** más que 50k con una probabilidad de {round(proba[0]*100,2)}%')
         else:
-            st.markdown(f'La persona **ganará** más que un negro de mierda con una probabilidad de {round(proba[0]*100,2)}%')
+            st.markdown(f'La persona **ganará** más que 50k con una probabilidad de {round(proba[0]*100,2)}%')
